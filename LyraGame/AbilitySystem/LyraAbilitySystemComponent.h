@@ -38,6 +38,9 @@ public:
 
 	ULyraAbilitySystemComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
+	/** Version of function in AbilitySystemGlobals that returns correct type */
+	static ULyraAbilitySystemComponent* GetAbilitySystemComponentFromActor(const AActor* Actor, bool LookForComponent = false);
+
 	//~UActorComponent interface
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	//~End of UActorComponent interface

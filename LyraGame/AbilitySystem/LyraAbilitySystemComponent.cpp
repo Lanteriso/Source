@@ -541,3 +541,7 @@ void ULyraAbilitySystemComponent::GetAbilityTargetData(const FGameplayAbilitySpe
 	}
 }
 
+ULyraAbilitySystemComponent* ULyraAbilitySystemComponent::GetAbilitySystemComponentFromActor(const AActor* Actor, bool LookForComponent)
+{
+	return Cast<ULyraAbilitySystemComponent>(UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(Actor, LookForComponent));
+}
